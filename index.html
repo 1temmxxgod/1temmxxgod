@@ -1,32 +1,152 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Розыгрыш призов</title>
+    <title>cfudik | Overhaul Mods</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdn.discordapp.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVJPNTKK9N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-ZVJPNTKK9N');
+    </script>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="stars"></div>
+    <div class="background-pattern"></div>
+    
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">OVERHAUL</div>
+            <nav class="nav-links">
+                <a href="#" class="nav-link active" onclick="showHome(event)">Home</a>
+                <a href="#" class="nav-link" onclick="togglePortfolio(event)">Mods</a>
+                <a href="https://t.me/Test_Overhaul_Bot" class="nav-link" target="_blank">Shop</a>
+                <a href="https://discord.gg/mtxr5dFtZk" class="nav-link" target="_blank">Discord</a>
+            </nav>
+        </div>
+    </header>
+
     <div class="container">
-        <header>
-            <h1>Розыгрыш призов</h1>
-            <p>Участвуй и выиграй крутые призы!</p>
-        </header>
-        <main>
-            <section class="giveaway-info">
-                <h2>Текущий розыгрыш</h2>
-                <p>Приз: <strong>Смартфон последней модели</strong></p>
-                <p>Дата окончания: <strong>31 марта 2025</strong></p>
-                <img src="https://via.placeholder.com/300x200" alt="Приз" class="prize-image">
-            </section>
-            <section class="participate">
-                <button id="participate-btn" class="btn">Участвовать</button>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2025 Розыгрыш призов. Все права защищены.</p>
-        </footer>
+        <div class="main-content">
+            <div class="hero-section">
+                <div class="hero-text">
+                    <h1>CFUDIK</h1>
+                    <p>The first 11 year old modmaker | Owner Overhaul Mods</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn primary" onclick="togglePortfolio(event)">PORTFOLIO</a>
+                        <a href="#" class="btn secondary" onclick="toggleDev(event)">DEV CATALOG</a>
+                    </div>
+                </div>
+                <div class="hero-avatar">
+                    <img src="liushis.jpg" alt="Avatar">
+                </div>
+            </div>
+
+            <div class="portfolio-section hidden">
+                <div class="section-header">
+                    <h2>MY PORTFOLIO</h2>
+                    <div class="back-button" onclick="showHome(event)">← Back to Home</div>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-category">
+                        <h3>REDUX</h3>
+                        <div class="portfolio-items scrollable">
+                            <a href="https://www.youtube.com/watch?v=rcWJdh8pcyE" class="portfolio-item" target="_blank">GODGO REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=n2BiLUUG4_g" class="portfolio-item" target="_blank">RED BLOOD v2 REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=hYgBnKUkxYU" class="portfolio-item" target="_blank">ILLUMINATE REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=VRKIkaAK5Xw" class="portfolio-item" target="_blank">BOMB1LA v3 REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=F64tvpcL3CY" class="portfolio-item" target="_blank">NEW YEAR v2 REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=07olYqus6Bs" class="portfolio-item" target="_blank">SIRIUS REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=0Xa6u2S0fCs" class="portfolio-item" target="_blank">SARANCHA REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=1na7juuKH_k" class="portfolio-item" target="_blank">BLACK REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=E2uFImXcIxU" class="portfolio-item" target="_blank">UNKNOWN v2 REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=3_HbW8XYisY" class="portfolio-item" target="_blank">REMAKE REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=4bLKQ16FVdo" class="portfolio-item" target="_blank">KIL MID REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=bIZcEMryZUs" class="portfolio-item" target="_blank">DRUG REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=p542XOGUSGI" class="portfolio-item" target="_blank">BOMB1LA v2 REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=_Z3TWu27API" class="portfolio-item" target="_blank">VIBIVALO v3 REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=BkVa3KHnyhs" class="portfolio-item" target="_blank">RED BLOOD REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=bDyS7iDjejI" class="portfolio-item" target="_blank">BOMB1LA REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=4PCg2Mu_gkM" class="portfolio-item" target="_blank">VIBIVALO v2 REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=d-tXJJjP3Xs" class="portfolio-item" target="_blank">VIBIVALO REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=ymP0MeiRTTE" class="portfolio-item" target="_blank">UNKNOWN v1 REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=EnjHRkvLk7o" class="portfolio-item" target="_blank">SUMMER REDUX</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-category">
+                        <h3>COLLABORATIONS</h3>
+                        <div class="portfolio-items">
+                            <a href="https://www.youtube.com/watch?v=QfyheGzpqrQ" class="portfolio-item" target="_blank">MIXCOLOR REDUX</a>
+                            <a href="https://www.youtube.com/watch?v=uRF85bJRn8g" class="portfolio-item" target="_blank">COLLABOTATION v2 REDUX</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-category">
+                        <h3>OTHER</h3>
+                        <div class="portfolio-items">
+                            <a href="https://www.youtube.com/watch?v=30uCli544LI" class="portfolio-item" target="_blank">0x1n GUNPACK</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dev-section hidden">
+                <div class="section-header">
+                    <h2>DEVELOPMENT</h2>
+                    <div class="back-button" onclick="showHome(event)">← Back to Home</div>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="dev-grid">
+                    <div class="dev-category">
+                        <h3>WebSite</h3>
+                        <div class="dev-items">
+                            <a href="https://cfudik.vercel.app" class="dev-item" target="_blank">CFUDIK</a>
+                        </div>
+                    </div>
+                    <div class="dev-category">
+                        <h3>Telegram Bot</h3>
+                        <div class="dev-items">
+                            <a href="https://t.me/Test_Overhaul_Bot" class="dev-item" target="_blank">Overhaul Shop</a>
+                            <a href="https://t.me/overhaull_bot" class="dev-item" target="_blank">Overhaul Redux</a>
+                        </div>
+                    </div>
+                    <div class="dev-category">
+                        <h3>Discord Bot</h3>
+                        <div class="dev-items">
+                            <a href="#" class="dev-item">Overhaul</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.youtube.com/@cfudik1337" class="social-link" target="_blank">
+                    <img src="yt.png" alt="YouTube">
+                </a>
+                <a href="https://discord.gg/mtxr5dFtZk" class="social-link" target="_blank">
+                    <img src="ds.png" alt="Discord">
+                </a>
+                <a href="https://t.me/ov3rhau1" class="social-link" target="_blank">
+                    <img src="tg.png" alt="Telegram">
+                </a>
+            </div>
+            <div class="footer-text">
+                © 2025 CFUDIK | All Rights Reserved
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
